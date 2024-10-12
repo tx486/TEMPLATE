@@ -14,10 +14,10 @@ public:
         fail.assign(MAXSIZE+1,0);
         cnt=0;
     }
-    void assign(int MaxSize){
-        tr.assign(MaxSize+1,vector<int>(26,0));
-        isEnd.assign(MaxSize+1,false);
-        fail.assign(MaxSize+1,0);
+    void assign(int MAXSIZE){
+        tr.assign(MAXSIZE+1,vector<int>(26,0));
+        isEnd.assign(MAXSIZE+1,false);
+        fail.assign(MAXSIZE+1,0);
         cnt=0;
     }
     void insert(string& s){

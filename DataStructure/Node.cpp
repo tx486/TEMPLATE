@@ -5,4 +5,7 @@ struct Node{
     int v,i;
     Node(){}
     Node(int v,int i):v(v),i(i){}
+    bool operator <(Node& other){
+        return v<other.v;
+    }
 };

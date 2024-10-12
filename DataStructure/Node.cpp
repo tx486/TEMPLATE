@@ -8,4 +8,7 @@ struct Node{
     bool operator <(Node& other){
         return v<other.v;
     }
+    bool operator <(const Node& other){
+        return v<other.v;
+    }
 };

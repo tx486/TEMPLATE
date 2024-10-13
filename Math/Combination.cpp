@@ -12,7 +12,7 @@ ll fp(ll a,ll b){
             a=a*a%MOD;
         }
         return res;
-    };
+}
 ll inv(ll a){
     return fp(a,MOD-2);
 }

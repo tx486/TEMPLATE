@@ -2,7 +2,7 @@
 using namespace std;
 vector<int> get_sa(string& s){
     int n=s.size(),m=127;
-    vector<int> sa(n),old_sa(n),X(n<<1),cnt(max(n+1,128));
+    vector<int> sa(n),old_sa(n),X(n<<1),cnt(max(n+1,m+1));
     for(int i=0;i<n;i++) cnt[X[i]=s[i]]++;
     for(int i=1;i<=m;i++) cnt[i]+=cnt[i-1];
     for(int i=n-1;i>=0;i--) sa[--cnt[X[i]]]=i;
@@ -29,4 +29,9 @@ vector<int> get_sa(string& s){
         if(n==m) break;
     }
     return sa;
+}
+vector<int> get_rk(vector<int>& sa){
+    vector<int> rk(sa.size());
+    for(int i=0;i<sa.size();i++) rk[sa[i]]=i;
+    return rk;
 }

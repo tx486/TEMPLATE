@@ -12,6 +12,9 @@ struct UnionSet{
         if(f[x]!=x) f[x]=find(f[x]);
         return f[x];
     }
+    int size(int x){
+        return sz[find(x)];
+    }
     void merge(int a,int b){
         int fa=find(a),fb=find(b);
         if(fa!=fb){

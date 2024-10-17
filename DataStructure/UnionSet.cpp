@@ -15,6 +15,9 @@ struct UnionSet{
     int size(int x){
         return sz[find(x)];
     }
+    bool same(int a,int b){
+        return find(a)==find(b);
+    }
     void merge(int a,int b){
         int fa=find(a),fb=find(b);
         if(fa!=fb){

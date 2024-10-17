@@ -5,10 +5,16 @@ struct Node{
     int v,i;
     Node(){}
     Node(int v,int i):v(v),i(i){}
-    bool operator <(Node& other){
-        return v<other.v;
+    bool operator < (const Node &o) const{
+        return v<o.v;
     }
-    bool operator <(const Node& other){
-        return v<other.v;
+};
+
+struct Node{
+    int u,v,w;
+    Node(){}
+    Node(int u,int v,int w):u(u),v(v),w(w){}
+    bool operator < (const Node &o) const{
+        return w<o.w;
     }
 };
